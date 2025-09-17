@@ -12,6 +12,16 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       color: #333;
+      background: url('background.jpg') center/cover no-repeat fixed; /* immagine di sfondo fissa */
+    }
+
+    /* Overlay per leggibilità */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.85);
+      z-index: -1;
     }
 
     /* Navbar */
@@ -61,8 +71,8 @@
 
     /* Hero section */
     .hero {
-      background: url('https://picsum.photos/1600/600?grayscale') center/cover no-repeat;
-      height: 45vh; /* meno della metà della schermata */
+      background: rgba(0,0,0,0.6);
+      height: 45vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -90,6 +100,9 @@
       padding: 60px 20px;
       max-width: 900px;
       margin: auto;
+      background: rgba(255,255,255,0.9);
+      border-radius: 10px;
+      margin-bottom: 30px;
     }
 
     section h2 {
@@ -133,7 +146,8 @@
     </div>
     <div class="menu" id="menu">
       <a href="#corsi">Corsi di specializzazione</a>
-      <a href="#servizi">Alloggio e servizi</a>
+      <a href="#alloggi">Alloggi</a>
+      <a href="#servizi">Servizi</a>
       <a href="#contatti">Contatti</a>
     </div>
   </div>
@@ -156,9 +170,19 @@
     </ul>
   </section>
 
+  <!-- Sezione alloggi -->
+  <section id="alloggi">
+    <h2>Alloggi</h2>
+    <ul>
+      <li>Camere singole</li>
+      <li>Camere multiple</li>
+      <li>Mensa</li>
+    </ul>
+  </section>
+
   <!-- Sezione servizi -->
   <section id="servizi">
-    <h2>Alloggio e servizi</h2>
+    <h2>Servizi</h2>
     <ul class="checklist">
       <li>Deliveroo</li>
       <li>Lavanderia</li>
@@ -167,7 +191,6 @@
       <li>Concierge</li>
       <li>Wi-Fi</li>
       <li>Trasporto</li>
-      <li>Mensa</li>
     </ul>
   </section>
 
@@ -192,3 +215,6 @@
   </script>
 </body>
 </html>
+
+</html>
+
