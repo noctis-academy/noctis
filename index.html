@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOCTIS</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 15px 20px;
+      z-index: 1000;
+    }
+
+    .hamburger {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .bar {
+      width: 30px;
+      height: 4px;
+      background-color: #333;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .menu a {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.3s;
+    }
+
+    .menu a:hover {
+      background: #f4f4f4;
+    }
+
+    /* Hero section */
+    .hero {
+      background: url('https://picsum.photos/1600/600?grayscale') center/cover no-repeat;
+      height: 45vh; /* meno della metà della schermata */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 4em;
+      font-family: 'Georgia', serif;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #4CAF50;
+    }
+
+    ul {
+      list-style: disc inside;
+    }
+
+    /* Lista con spunta */
+    .checklist {
+      list-style: none;
+    }
+
+    .checklist li::before {
+      content: "✔ ";
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar con hamburger -->
+  <div class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="menu" id="menu">
+      <a href="#corsi">Corsi di specializzazione</a>
+      <a href="#servizi">Alloggio e servizi</a>
+      <a href="#contatti">Contatti</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>NOCTIS</h1>
+    <p>Accademia residenziale di economia e leadership</p>
+  </div>
+
+  <!-- Sezione corsi -->
+  <section id="corsi">
+    <h2>Corsi di specializzazione</h2>
+    <ul>
+      <li>Macrofinanza avanzata</li>
+      <li>Strategie di investimento</li>
+      <li>Economia comportamentale</li>
+      <li>Private equity</li>
+      <li>Finanza quantitativa</li>
+    </ul>
+  </section>
+
+  <!-- Sezione servizi -->
+  <section id="servizi">
+    <h2>Alloggio e servizi</h2>
+    <ul class="checklist">
+      <li>Deliveroo</li>
+      <li>Lavanderia</li>
+      <li>Campi da golf</li>
+      <li>Palestra</li>
+      <li>Concierge</li>
+      <li>Wi-Fi</li>
+      <li>Trasporto</li>
+      <li>Mensa</li>
+    </ul>
+  </section>
+
+  <!-- Sezione contatti -->
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <p><b>NOCTIS Accademia</b></p>
+    <p>Email: <a href="mailto:contatto@noctis.it">contatto@noctis.it</a></p>
+    <p>Telefono: +39 333 1234567</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 NOCTIS - Tutti i diritti riservati
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
